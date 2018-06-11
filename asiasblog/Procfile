@@ -1,0 +1,1 @@
+web: gunicorn asiasblog.wsgi --log-file -
