@@ -123,3 +123,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL = '/pics/'
 MEDIA_ROOT = BASE_DIR
+
+# Activate Django-Heroku.
+import django_heroku
+django_heroku.settings(locals())
