@@ -6,6 +6,7 @@ verify_ssl = true
 [packages]
 dj-database-url = "*"
 django = "*"
+django-watermark = "*"
 gunicorn = "*"
 django-heroku = "*"
 psycopg2 = "*"
