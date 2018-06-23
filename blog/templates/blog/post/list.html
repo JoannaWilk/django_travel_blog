@@ -1,0 +1,41 @@
+{% extends "blog/base.html" %}
+{% load static %}
+
+  {% block image %}
+    <img src="{% static 'posts/blog_welcome_picture.jpg' %}" class="img-fluid rounded" style="max-height:400px"/>
+    <br />
+    <hr />
+  {% endblock %}
+    <br />
+
+  {% block title %}WilQ's Journey{% endblock %}
+
+  {% block content %}
+    <h1>Welcome to WilQ's Journey blog!</h1>
+    Welcome to my travel blog!
+    <br />
+    My name is Joanna Wilk and I don't travel a lot. That's why when I do, I make sure to experience a lifetime adventures. :)
+    <br />
+    Prepare yourself for journey through some beautiful landscapes all over the world! Be ready for discovering the variety of cultures and food!
+    <br />
+    As we organize our travels on our own, you can also find a lot of tips in case you'd like to go for some adventures on your own.
+    <br />
+    Enjoy!
+    <hr />
+    <br />
+    <h5>Latest posts:</h5>
+    {% for post in posts %}
+
+    <a href="{{ post.get_absolute_url }}" style="color: rgb(0,0,0)"><h3>{{ post.title }}</h3></a>
+    <h5>
+      <i class="far fa-calendar-alt"></i>
+      {{ post.publish_date }}
+    </h5>
+    <br />
+    <img src="{{ post.image.url }}" class="img-fluid rounded" style="max-height:200px"/>
+    <br />
+    <p>{{ post.body|truncatewords:30|linebreaks }}</p>
+    <hr />
+
+    {% endfor %}
+  {% endblock %}
