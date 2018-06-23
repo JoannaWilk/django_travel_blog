@@ -1,4 +1,2 @@
 # django travel blog
-Website created as a Django project.
-
-It's deployed on Heroku: https://wilqs-travel.herokuapp.com/
+Website created as a Django project, based on Nick Walter's online course 'The Ultimate Beginner's Guide to Django'.
