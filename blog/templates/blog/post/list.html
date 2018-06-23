@@ -2,15 +2,15 @@
 {% load static %}
 
   {% block image %}
-    <img src="{% static 'posts/blog_welcome_picture.jpg' %}" class="img-fluid rounded" style="max-height:400px"/>
+    <img src="{% static 'blog/blog_welcome_picture.jpg' %}" class="img-fluid rounded" style="max-height:400px"/>
     <br />
     <hr />
   {% endblock %}
     <br />
 
-  {% block title %}WilQ's Journey{% endblock %}
+  {% block bookmarktitle %}WilQ's Journey{% endblock %}
 
-  {% block content %}
+  {% block postcontent %}
     <h1>Welcome to WilQ's Journey blog!</h1>
     Welcome to my travel blog!
     <br />
@@ -38,4 +38,7 @@
     <hr />
 
     {% endfor %}
+
+    {% include "blog/pagination.html" with page=posts %}
+
   {% endblock %}
