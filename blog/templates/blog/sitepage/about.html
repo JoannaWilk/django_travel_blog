@@ -1,0 +1,32 @@
+{% extends "blog/base.html" %}
+{% load static %}
+
+{% block bookmarktitle %}About the author and the website{% endblock %}
+
+{% block content%}
+  <br />
+  <h2 class="text-left">About the author and the website</h2>
+  <h6>
+    <i class="far fa-calendar-alt"></i>
+      Publish date: 2018-06-10
+  </h6>
+  <hr />
+
+  <br />
+
+  My name's Joanna Wilk and I am the author of this site.
+  <br />
+  <br />
+  I am a self-taught aspiring Developer, currently working as a Data Scientist. Starting from Python scripts as a glue for analytical processes, going through analytical process automation using OOP, now I am really excited being on my journey towards Web Development.
+  <br />
+  <br />
+  Next to the passion for coding, I love travels, so it was a natural choice to create blog about my travels as my first website. Regarding technical details, I used Django framework, Bootstrap to spice up the design (however there is still lot to improve in this field ;)) and icons from Font Awesome project.
+  <br />
+  <br />
+{% endblock %}
+
+{% block image %}
+      <img src="{% static 'sitepages/blog_about.jpg' %}" class="img-fluid rounded mx-auto d-block" style="max-height:400px"/>
+      <hr />
+      <br />
+{% endblock %}
